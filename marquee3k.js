@@ -90,7 +90,7 @@
     animate() {
       if (!this.paused) {
         const isScrolled = this.reverse ? this.offset < 0 : this.offset > this.contentWidth * -1;
-        const direction = this.reverse ? -1 : 1;
+        const direction = this.reverse == 'true' ? -1 : 1;
         const reset = this.reverse ? this.contentWidth * -1 : 0;
 
         if (isScrolled) this.offset -= this.speed * direction;
